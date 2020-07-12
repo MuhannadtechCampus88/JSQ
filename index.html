@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=0">
+	<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Student List</title>
+</head>
+<body>
+	<div class="container">
+	<h4>Add Student</h4>
+	<form id="student-form">
+		
+		<div>
+			<label for ="name">Student Name</label>
+			<input type="text" id="name" class="u-full-width">
+		</div>
+		
+		<div>
+			<label for="dob">Date Of Birth</label>
+			<input type="text"id="dob" class="u-full-width">
+		</div>
+
+		<div>
+				<label for="matriculation">Matriculation#</label>
+				<input type="text" id="matriculation" class="u-full-width">
+		</div>
+
+		<div>
+			<input type="Submit" value="Submit" class="u-full-width">
+		</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date Of Birth</th>
+					<th>Matriculation#</th>
+
+				</tr>
+			</thead>
+			<tbody id="student-list">
+				
+			</tbody>
+		</table>
+			
+	</form>		
+
+	<button id="Change" type ="button" name = "button">JQ</button>
+	<h5 class = "text-danger">TEST</h5>
+	<p id = "fideTo">FideTo test</p>
+	<br><a id="myLink" href="https://www.google.com">google</a><br>
+
+	<input id="M" type="text" value="">
+	</div>
+
+	<div id="toggleInfo" style="background-color: gray"> Show </div>
+	<p id="PP" style="background-color: red">test toggle 11111</p>
+	<script src="app.js"></script>
+
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+<script >
+	$( document ).ready(function()
+	{
+	//	alert('Hi');
+		$('#Change').click(function()
+		{
+			$('.text-danger').text("YES");
+			$('#myLink').attr({"href": "https://flexcourses.com","target" : "_blank"});
+			$("#myLink").text("flexcourses");
+			$("#fideTo").fadeTo("fast","0.2");
+		});
+		
+		// $("#fideTo").hover(function(){
+		// 		$(this).fadeOut();
+		// })
+
+		$("#M").hover(function(){
+		  $(this).val("IN");
+		}, function(){
+			$(this).val("out");
+		});
+
+		$("#PP").hide();
+
+		$("#toggleInfo").click(function(){ //show , hide , toggle ()
+			$("#PP").toggle(500)
+		});
+		
+		//keyup
+		//keydown
+		//keypress
+
+		
+
+		
+
+		$("h4").click(function(){ 
+			$("#student-form").slideToggle("fast"); //slideToggle ,slideDown , slideUp
+		})
+	});
+
+</script>
+	
+</body>
+</html>

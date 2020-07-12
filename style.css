@@ -1,0 +1,13 @@
+.error{
+	background: red;
+}
+
+.success {
+	background: green;
+}
+
+.success, .error {
+	color: white;
+	padding: 5px;
+	margin: 5px 0 5px 0;
+}
